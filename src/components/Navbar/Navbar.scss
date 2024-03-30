@@ -1,0 +1,77 @@
+@import '../../variables.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 24px 96px;
+  justify-content: space-between;
+  // background-color: $dark-blue-1;
+  background-image: linear-gradient(190deg, #3a5bb9 0, #1f50b0 50%, #0045a7 100%);
+  @include umbra24DP();
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .navlist {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    @include l1-r();
+
+    li {
+      transition: all .2s ease;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        margin: auto;
+        opacity: 0;
+        transition: all 0.24s ease-in-out
+      }
+
+      &.actual-route {
+        position: relative;
+        
+        a {
+          transition: all 0.24s ease-in-out;
+          color: $n9;
+
+          &:hover {
+            color: $n9
+          }
+        }
+        
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+          bottom: -4px;
+          left: 0;
+          opacity: 1;
+        }
+      }
+
+      a {
+        transition: all 0.12s ease-in-out;
+        color: $n7;
+
+        &:hover {
+          color: $n8;
+        }
+      }
+    }
+  }
+}

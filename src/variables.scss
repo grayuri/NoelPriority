@@ -1,0 +1,246 @@
+// Color Variants
+// --------------
+// Primaries
+$green-1: #83B120;
+$green-2: #B5E056;
+$green-3: #DBF0AE;
+
+$yellow-1: #F8BC37;
+$yellow-2: #FACC67;
+$yellow-3: #FCDC97;
+
+$orange-1: #FB771C;
+$orange-2: #FC9751;
+$orange-3: #FDB380;
+
+$dark-blue-1: #2051B0;
+$dark-blue-2: #2A65D8;
+$dark-blue-3: #5685E0;
+
+// Neutrals
+$n1: #1D1F1A;
+$n2: #363833;
+$n3: #4F4F4E;
+$n4: #686867;
+$n5: #838382;
+$n6: #9E9E9D;
+$n7: #B6B6B5;
+$n8: #D0D0CF;
+$n9: #FEFEFE;
+
+// Accents
+$pink-1: #EE6C90;
+$pink-2: #F39AB3;
+$pink-3: #F8C7D4;
+
+$blue-1: #367BF7;
+$blue-2: #669AF9;
+$blue-3: #9ABCFB;
+
+$purple-1: #8A20B0;
+$purple-2: #BC57E0;
+$purple-3: #DFAEF0;
+
+$red-1: #B03620;
+$red-2: #D8442A;
+$red-3: #E06A56;
+
+///////////////////////////////////////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin fontLivvic() {
+  font-family: "Livvic", sans-serif;
+}
+
+@mixin fontRaleway() {
+  font-family: "Raleway", sans-serif;
+}
+
+// Typography Variants
+// -------------------
+// Headings
+@mixin h1() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontLivvic();
+  @include getFontSize(40px);
+}
+
+@mixin h2() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontLivvic();
+  @include getFontSize(32px);
+}
+
+@mixin h3() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontLivvic();
+  @include getFontSize(24px);
+}
+
+@mixin h4() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontLivvic();
+  @include getFontSize(16px);
+}
+
+@mixin h5() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontLivvic();
+  @include getFontSize(14px);
+}
+
+// Bodies
+@mixin p1-r() {
+  font-weight: 400;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(16px);
+}
+
+@mixin p1-b() {
+  font-weight: 600;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(16px);
+}
+
+@mixin p2-r() {
+  font-weight: 400;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(14px);
+}
+
+@mixin p2-b() {
+  font-weight: 600;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(14px);
+}
+
+@mixin p3-r() {
+  font-weight: 400;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(12px);
+}
+
+@mixin p3-b() {
+  font-weight: 600;
+  line-height: 1.5;
+  @include fontRaleway();
+  @include getFontSize(12px);
+}
+
+// Labels
+@mixin l1-r() {
+  font-weight: 400;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(20px);
+}
+
+@mixin l1-b() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(20px);
+}
+
+@mixin l2-r() {
+  font-weight: 400;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(16px);
+}
+
+@mixin l2-b() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(16px);
+}
+
+@mixin l3-r() {
+  font-weight: 400;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(14px);
+}
+
+@mixin l3-b() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(14px);
+}
+
+@mixin l4-r() {
+  font-weight: 400;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(12px);
+}
+
+@mixin l4-b() {
+  font-weight: 600;
+  line-height: 1.25;
+  @include fontRaleway();
+  @include getFontSize(12px);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Shadow Variants
+@mixin umbra1DP() { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14); }
+@mixin penumbra1DP() { box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12); }
+@mixin ambient1DP() { box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra2DP() { box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14); }
+@mixin penumbra2DP() { box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.12); }
+@mixin ambient2DP() { box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra3DP() { box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14); }
+@mixin penumbra3DP() { box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.12); }
+@mixin ambient3DP() { box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra4DP() { box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.14); }
+@mixin penumbra4DP() { box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.12); }
+@mixin ambient4DP() { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra6DP() { box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.14); }
+@mixin penumbra6DP() { box-shadow: 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
+@mixin ambient6DP() { box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra8DP() { box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.14); }
+@mixin penumbra8DP() { box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.12); }
+@mixin ambient8DP() { box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra9DP() { box-shadow: 0px 9px 12px 1px rgba(0, 0, 0, 0.14); }
+@mixin penumbra9DP() { box-shadow: 0px 3px 16px 2px rgba(0, 0, 0, 0.12); }
+@mixin ambient9DP() { box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra12DP() { box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14); }
+@mixin penumbra12DP() { box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.12); }
+@mixin ambient12DP() { box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra16DP() { box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14); }
+@mixin penumbra16DP() { box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12); }
+@mixin ambient16DP() { box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.20); }
+
+@mixin umbra24DP() { box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14); }
+@mixin penumbra24DP() { box-shadow: 0px 9px 46px 8px rgba(0, 0, 0, 0.12); }
+@mixin ambient24DP() { box-shadow: 0px 11px 15px 0px rgba(0, 0, 0, 0.20); }
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Utils
+@mixin getFontSize($minimum) {
+  font-size: clamp($minimum, 1.2vw, $minimum * 1.2);
+}
