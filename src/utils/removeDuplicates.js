@@ -8,5 +8,3 @@ export function getNotRedundantValues(values) {
 
   return filteredValues
 }
-
-// Git Test

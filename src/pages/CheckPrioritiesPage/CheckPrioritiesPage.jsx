@@ -22,7 +22,13 @@ export default function CheckPrioritiesPage() {
 
   function writeCheckedValues(value) {
     setCheckedValue(value)
-    getterPriorityInputRef.current.select()
+
+    if (checkedValue.includes("tsX")) {
+      if (checkedValue.length === 10) getterPriorityInputRef.current.select()
+    }
+    if (checkedValue.includes("tscage" | "tscart")) {
+      if (checkedValue.length === 8) getterPriorityInputRef.current.select()
+    }
   }
 
   function addMoreValues() {
@@ -134,17 +140,16 @@ export default function CheckPrioritiesPage() {
                   </div>
                   <p className="message">
                     {
-                      checkedValue.length === 0 && "Escaneie o tote desejado para verificar se ele é, de fato, uma prioridade."
+                      (checkedValue.length === 0 && checkedValue === "") 
+                      && "Escaneie o tote desejado para verificar se ele é, de fato, uma prioridade."
                     }
                     {
-                      (checkedValue.length > 0 && isPriority)
-                      ? "Este tote é uma prioridade! Destaque-o ou leve-o para uma das estações."
-                      : ""
+                      (checkedValue.length > 0 && checkedValue !== "" && isPriority)
+                      && "Este tote é uma prioridade! Destaque-o ou leve-o para uma das estações."
                     }
                     {
-                      (checkedValue.length > 0 && !isPriority)
-                      ? "Este tote não é uma prioridade (ainda). Caso haja outro tote por perto, verifique-o."
-                      : ""
+                      (checkedValue.length > 0 && checkedValue !== "" && !isPriority)
+                      && "Este tote não é uma prioridade (ainda). Caso haja outro tote por perto, verifique-o."
                     }
                   </p>
                 </div>
