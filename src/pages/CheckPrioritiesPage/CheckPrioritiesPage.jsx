@@ -23,10 +23,10 @@ export default function CheckPrioritiesPage() {
   function writeCheckedValues(value) {
     setCheckedValue(value)
 
-    if (checkedValue.includes("tsX")) {
+    if (checkedValue.startsWith("tsX")) {
       if (checkedValue.length === 10) getterPriorityInputRef.current.select()
     }
-    if (checkedValue.includes("tscage" | "tscart")) {
+    else if (checkedValue.startsWith("tscage") || checkedValue.startsWith("tscart")) {
       if (checkedValue.length === 8) getterPriorityInputRef.current.select()
     }
   }
